@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas</title>
+</head>
+<body>
+    <h1> Usando canvas</h1>
+<canvas id="canvas" width="600" height="400"></canvas>
+
+    <script>
+let canvaScreen= document.getElementById("canvas");
+let pincel = canvaScreen.getContext("2d");
+
+//pincel.fillRect(0,0,canvas.width,canvas.height)
+
+pincel.fillStyle = 'darkgreen';
+pincel.fillRect(200, 50, 350 ,300);
+
+pincel.fillStyle = 'black';
+pincel.fillRect(250, 100, 90, 90);
+pincel.fillRect(410, 100, 90, 90);
+
+pincel.fillRect(340, 190, 70, 100);
+
+pincel.fillRect(300, 240, 40, 110);
+pincel.fillRect(410, 240, 40, 110);
+
+pincel.beginPath();
+    pincel.moveTo(50, 50);
+    pincel.lineTo(50, 400);
+    pincel.lineTo(400, 400)
+    pincel.fill();
+
+    pincel.beginPath();
+    pincel.moveTo(100, 175);
+    pincel.lineTo(100, 350);
+    pincel.lineTo(275, 350)
+    pincel.fillStyle = "white";
+    pincel.fill();
+
+    </script>
+</body>
+</html>
